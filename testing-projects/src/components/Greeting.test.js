@@ -1,5 +1,8 @@
 import { render, screen } from "@testing-library/react";
+<<<<<<< HEAD
 import userEvent from "@testing-library/user-event";
+=======
+>>>>>>> 8831f51234b89c5903511b5fc542b3d14fb260ea
 import Greeting from "./Greeting";
 
 describe("Greeting component", () => {
@@ -15,6 +18,7 @@ describe("Greeting component", () => {
     expect(helloWorldElement).toBeInTheDocument();
   });
 
+<<<<<<< HEAD
   test("renders good to see you if the button was NOT clicked", () => {
     render(<Greeting />);
     const outputElement = screen.getByText("Its good to see you!", {
@@ -42,5 +46,19 @@ describe("Greeting component", () => {
       exact: false,
     });
     expect(outputElement).toBeNull();
+=======
+  test("state change on btn click Change Text", () => {
+    render(<Greeting />);
+
+    const stateChangeElement = screen.getByAltText("Change");
+    expect(stateChangeElement).toBeInTheDocument();
+  });
+
+  test("state didnt change on btn click Change Text", () => {
+    render(<Greeting />);
+
+    const stateChangeElement = screen.getByAltText("Its good to see you!");
+    expect(stateChangeElement).toBeInTheDocument();
+>>>>>>> 8831f51234b89c5903511b5fc542b3d14fb260ea
   });
 });
