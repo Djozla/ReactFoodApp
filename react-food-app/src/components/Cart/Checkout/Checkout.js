@@ -84,7 +84,7 @@ function Checkout(props) {
           value={enteredName}
         />
         {nameHasError && (
-          <p className={classes["error-text"]}>Must not be empty</p>
+          <p className={classes["error-text"]}>Can not be empty</p>
         )}
       </div>
       <div className={adressClass}>
@@ -97,7 +97,7 @@ function Checkout(props) {
           onBlur={enteredAdressTouched}
         />
         {adressHasError && (
-          <p className={classes["error-text"]}>Must not be empty</p>
+          <p className={classes["error-text"]}>Can not be empty</p>
         )}
       </div>
       <div className={emailClass}>
@@ -110,9 +110,7 @@ function Checkout(props) {
           onBlur={enteredEmailTouched}
         />
         {emailHasError && (
-          <p className={classes["error-text"]}>
-            Must not be empty and contain @
-          </p>
+          <p className={classes["error-text"]}>Must be a valid email</p>
         )}
       </div>
       <div className={classes["form-actions"]}>
